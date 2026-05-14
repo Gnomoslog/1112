@@ -1,3 +1,6 @@
+Вот код с удаленной кнопкой скачивания и описаниями. Все ссылки на изображения и структура слайдов сохранены.
+
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -6,10 +9,6 @@
     <title>Парк Победы | Фотопрезентация | 20 слайдов</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Библиотека для скриншотов -->
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-    <!-- Библиотека для создания PDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -192,39 +191,12 @@
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #0a1217; }
         ::-webkit-scrollbar-thumb { background: #F5B042; border-radius: 8px; }
-
-        /* Стиль кнопки скачивания слайда */
-        .download-btn {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(0,0,0,0.6);
-            backdrop-filter: blur(8px);
-            border: 1px solid #F5B042;
-            color: #F5B042;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.2s;
-            z-index: 10;
-        }
-        .download-btn:hover {
-            background: #F5B042;
-            color: #000;
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body>
 <div class="slides-container" id="slidesContainer">
-    <!-- ====================== 20 СЛАЙДОВ ====================== -->
     
-    <!-- Слайд 1: Титульный -->
+    <!-- Слайд 1: Титульный - панорама Парка Победы -->
     <section class="slide" style="background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/4384151/pub_62d993bf9d059c55fe72c4dc_62d995e977825969564aadda/scale_1200'); background-position: center 25%;">
         <div class="content">   
             <div class="badge"><i class="fas fa-flag-checkered"></i> </div>
@@ -232,17 +204,15 @@
             <p class="lead-text">Главный мемориальный комплекс России, подвига и величия.<br></p>
             <div style="margin-top: 2rem;"><i class="fas fa-chevron-down" style="color:#F5B042; font-size:2rem;"></i></div>
         </div>
-        <button class="download-btn" data-slide="1"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 2: Поклонная гора -->
+    <!-- Слайд 2: Поклонная гора панорама -->
     <section class="slide" style="background-image: url('https://im.kommersant.ru/relay/relayimage/619539tyucolon20160926183200/1200');">
         <div class="content">
             <h2><i class="fas fa-mountain-sun"></i> Поклонная гора</h2>
             <p class="lead-text">Историческая высота, где с XVII века встречали почётных гостей. Сегодня — сердце Парка Победы, открытого в 1995 году к 50-летию Победы.</p>
             <p>Символ единства, мужества и памяти о Великой Отечественной войне.</p>
         </div>
-        <button class="download-btn" data-slide="2"><i class="fas fa-download"></i></button>
     </section>
 
     <!-- Слайд 3: Монумент Победы (обелиск) -->
@@ -252,17 +222,15 @@
             <p>141,8 метра — по 10 см за каждый день войны (1418 дней). На вершине — богиня Ника и ангелы, трубящие славу. У подножия — Георгий Победоносец, поражающий змея.</p>
             <div class="fact-list"><li><i class="fas fa-ruler"></i> Высота 141.8 м</li><li><i class="fas fa-crown"></i> 25 тонн бронзы</li></div>
         </div>
-        <button class="download-btn" data-slide="3"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 4: Музей Победы -->
+    <!-- Слайд 4: Центральный музей Великой Отечественной войны -->
     <section class="slide" style="background-image: url('https://avatars.mds.yandex.net/i?id=e6d3a87ccdaef31ec2e99cbbddab0dbe_l-4494838-images-thumbs&n=13');">
         <div class="content">
             <h2><i class="fas fa-landmark"></i> Музей Победы</h2>
             <p>Музей Победы — главный военно-исторический музей России, посвящённый Великой Отечественной и Второй мировой войнам, один из крупнейших в мире по этой тематике. Расположен в Москве на Поклонной горе, в мемориальном парке Победы</p>
             <div class="icon-row"><i class="fas fa-trophy"></i><i class="fas fa-scroll"></i><i class="fas fa-medal"></i></div>
         </div>
-        <button class="download-btn" data-slide="4"><i class="fas fa-download"></i></button>
     </section>
 
     <!-- Слайд 5: Храм Георгия Победоносца -->
@@ -271,7 +239,6 @@
             <h2><i class="fas fa-church"></i> Храм-памятник</h2>
             <p>Освящён в 1995 году в честь Георгия Победоносца. Белокаменный храм с золочёными куполами — место молитвы о воинах, павших за Отечество.</p>
         </div>
-        <button class="download-btn" data-slide="5"><i class="fas fa-download"></i></button>
     </section>
 
     <!-- Слайд 6: Аллея Городов-героев -->
@@ -280,35 +247,31 @@
             <h2><i class="fas fa-city"></i> Города-герои</h2>
             <p>13 гранитных стел с названиями городов, удостоенных высшей степени отличия: Москва, Ленинград, Сталинград, Севастополь, Одесса, Киев, Брест, Керчь, Новороссийск, Минск, Тула, Мурманск, Смоленск.</p>
         </div>
-        <button class="download-btn" data-slide="6"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 7: Фонтаны -->
+    <!-- Слайд 7: Фонтаны Парка Победы -->
     <section class="slide" style="background-image: url('https://media.kudago.com/images/place/a9/67/a9676806a313661a0a3de2a5ca44f866.webp');">
         <div class="content">
             <h2><i class="fas fa-water"></i> Каскад фонтанов</h2>
             <p>Пять фонтанов, символизирующих пять лет войны (1941–1945). Вечером включается динамическая светомузыка — любимое место для прогулок и фото.</p>
         </div>
-        <button class="download-btn" data-slide="7"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 8: Военная техника -->
+    <!-- Слайд 8: Выставка военной техники Т-34 -->
     <section class="slide" style="background-image: url('https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/1364199/v4HotV2stqFpr7XoDa5OQ.jpeg');">
         <div class="content">
             <h2><i class="fas fa-tank"></i> Техника под открытым небом</h2>
             <p>Более 300 образцов: легендарный Т-34, «Катюша», Ил-2, танки Т-80, артиллерийские системы, вертолёты и даже фрагменты Берлинской стены.</p>
         </div>
-        <button class="download-btn" data-slide="8"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 9: Трагедия народов -->
+    <!-- Слайд 9: Скульптура «Трагедия народов» -->
     <section class="slide" style="background-image: url('https://makprofi.ru/wp-content/uploads/2023/01/4-640x426.png');">
         <div class="content">
             <h2><i class="fas fa-dove"></i> Трагедия народов</h2>
             <p>Монумент жертвам геноцида. Истерзанные фигуры, напоминающие о страшных страницах войны — концлагерях и насильственном угоне в рабство.</p>
             <div class="quote">«Пока мы помним — мы живы»</div>
         </div>
-        <button class="download-btn" data-slide="9"><i class="fas fa-download"></i></button>
     </section>
 
     <!-- Слайд 10: Вечный огонь -->
@@ -317,16 +280,14 @@
             <h2><i class="fas fa-fire"></i> Вечный огонь</h2>
             <p>Зажжён от частицы огня с Могилы Неизвестного Солдата у Кремлёвской стены. В памятные даты здесь несут почётный караул и возлагают цветы.</p>
         </div>
-        <button class="download-btn" data-slide="10"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 11: Зал Памяти и Скорби -->
+    <!-- Слайд 11: Аллея Памяти -->
     <section class="slide" style="background-image: url('https://victorymuseum.ru/upload/resize_cache/iblock/a1b/760_1000_1/7.JPG');">
         <div class="content">
             <h2><i class="fas fa-tree"></i> Зал Памяти и Скорби</h2>
             <p>Зал Памяти и скорби увековечивает память 26 600 000 наших соотечественников, погибших при защите Родины в годы Великой Отечественной войны 1941-1945 годов.</p>
         </div>
-        <button class="download-btn" data-slide="11"><i class="fas fa-download"></i></button>
     </section>
 
     <!-- Слайд 12: Мемориальная мечеть -->
@@ -335,43 +296,38 @@
             <h2><i class="fas fa-place-of-worship"></i> Единство вероисповеданий</h2>
             <p>Мемориальная мечеть и Мемориальная синагога — дань памяти воинам всех национальностей, сражавшимся за Родину.</p>
         </div>
-        <button class="download-btn" data-slide="12"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 13: Барельефы -->
+    <!-- Слайд 13: Рельефы и барельефы -->
     <section class="slide" style="background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/9731181/pub_643e359f241af459e8a4d218_643e37dc62f9b048f8d83a73/scale_1200');">
         <div class="content">
             <h2><i class="fas fa-palette"></i> Каменная летопись</h2>
             <p>Монументальные барельефы, запечатлевшие подвиги солдат, партизан и тружеников тыла. Каждый сюжет — живая история войны.</p>
         </div>
-        <button class="download-btn" data-slide="13"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 14: Письма -->
+    <!-- Слайд 14: Письма огненных лет -->
     <section class="slide" style="background-image: url('https://cdnstatic.rg.ru/crop1200x1619/uploads/images/2026/04/16/0-pismo-general-leytenanta-zaharova-synu_240.jpg');">
         <div class="content">
             <h2><i class="fas fa-leaf"></i>Письма огненных лет</h2>
             <p>На выставке в Историческом музее, организованной фондом "Наследники победителей", представлено богатейшее эпистолярное наследие военного времени - тысячи писем красноармейцев и офицеров, их родных и близких. Легендарные треугольники, соединявшие тыл и фронт, все 1418 огненных дней</p>
         </div>
-        <button class="download-btn" data-slide="14"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 15: Диорама -->
+    <!-- Слайд 15: Диорама "Битва за Берлин" -->
     <section class="slide" style="background-image: url('https://www.mos.ru/upload/newsfeed/newsfeed/bitva(24).jpg');">
         <div class="content">
             <h2><i class="fas fa-moon"></i> Диорама "Битва за Берлин"</h2>
             <p>Трёхмерная историко-художественная панорама «Битва за Берлин. Подвиг знаменосцев.</p>
         </div>
-        <button class="download-btn" data-slide="15"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 16: Реликвии -->
+    <!-- Слайд 16: Реликвии войны -->
     <section class="slide" style="background-image: url('https://cdn-storage-media.tass.ru/resize/1312x868/tass_media/2025/10/01/e/1759304346682016_eV-5dx6n.jpg');">
         <div class="content">
             <h2><i class="fas fa-calendar-alt"></i> Реликвии войны</h2>
             <p>витрина с редкими экспонатами — личные вещи маршалов, солдатские письма-треугольники, ордена и медали.</p>
         </div>
-        <button class="download-btn" data-slide="16"><i class="fas fa-download"></i></button>
     </section>
 
     <!-- Слайд 17: Зал Славы -->
@@ -380,19 +336,17 @@
             <h2><i class="fas fa-graduation-cap"></i> Зал Славы</h2>
             <p>Зал Славы в Музее Победы — беломраморный зал с золотыми именами Героев Советского Союза, в центре — скульптура «Солдат-Победитель»</p>
         </div>
-        <button class="download-btn" data-slide="17"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 18: Путь к Победе -->
+    <!-- Слайд 18: Экспозиция «Путь к Победе» -->
     <section class="slide" style="background-image: url('https://victorymuseum.ru/museum-complex/glavnoe-zdanie-muzeya/ekspozitsiya-put-k-pobede/images/ANDR7395-Enhanced-NR.png');">
         <div class="content">
             <h2><i class="fas fa-city"></i>Экспозиция «Путь к Победе» </h2>
             <p>Новая историко-мультимедийная экспозиция «Путь к Победе», размещенная на площади 4400 кв. метров, приурочена к 80-летию Великой Победы и посвящена событиям, произошедшим на полях сражений в годы Великой Отечественной войны, и подвигам солдат, вставших на защиту Родины.</p>
         </div>
-        <button class="download-btn" data-slide="18"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 19: Цифры -->
+    <!-- Слайд 19: Парк в цифрах -->
     <section class="slide" style="background-image: url('https://avatars.mds.yandex.net/get-altay/16270073/2a0000019889c915e9c04ecf28339b0d7047/orig');">
         <div class="content">
             <h2><i class="fas fa-chart-simple"></i> Парк в цифрах</h2>
@@ -404,10 +358,9 @@
             </div>
             <p>Один из самых посещаемых мемориалов мира.</p>
         </div>
-        <button class="download-btn" data-slide="19"><i class="fas fa-download"></i></button>
     </section>
 
-    <!-- Слайд 20: Финал -->
+    <!-- Слайд 20: Финал - цветы и память -->
     <section class="slide" style="background-image: url('https://www.mskagency.ru/b/c/812296.jpg');">
         <div class="content">
             <div class="badge"><i class="fas fa-heart"></i> Вечная слава героям!</div>
@@ -416,19 +369,17 @@
             <div style="margin: 30px 0 10px;"><i class="fas fa-dove fa-3x" style="color:#F5B042;"></i> <i class="fas fa-ribbon fa-3x" style="color:#e63946; margin-left:15px;"></i></div>
             <p>слайды о величайшем подвиге народа.</p>
         </div>
-        <button class="download-btn" data-slide="20"><i class="fas fa-download"></i></button>
     </section>
 </div>
 
 <!-- навигация фиксированная -->
 <div class="slide-nav">
-    <button id="pdfAllBtn" style="background:#F5B042; color:#000; width:auto; padding:0 12px;" title="Скачать все слайды в PDF"><i class="fas fa-file-pdf"></i> PDF</button>
     <button id="prevSlideBtn" aria-label="Предыдущий слайд"><i class="fas fa-chevron-up"></i></button>
     <span class="page-indicator" id="pageIndicator">1 / 20</span>
     <button id="nextSlideBtn" aria-label="Следующий слайд"><i class="fas fa-chevron-down"></i></button>
 </div>
 <footer>
-    <i class="fas fa-camera"></i> Фотографии: Wikimedia Commons, открытые музейные архивы | Презентация из 20 слайдов о Парке Победы
+    <i class=""></i>
 </footer>
 
 <script>
@@ -439,7 +390,6 @@
         const indicator = document.getElementById('pageIndicator');
         const prevBtn = document.getElementById('prevSlideBtn');
         const nextBtn = document.getElementById('nextSlideBtn');
-        const pdfBtn = document.getElementById('pdfAllBtn');
 
         function updateIndicator() {
             if (indicator) indicator.innerText = (currentIndex + 1) + ' / ' + total;
@@ -485,102 +435,8 @@
 
         updateIndicator();
         slides[0].scrollIntoView({ block: 'start' });
-
-        // ========== СКАЧИВАНИЕ ОТДЕЛЬНЫХ СЛАЙДОВ ==========
-        const downloadBtns = document.querySelectorAll('.download-btn');
-        
-        downloadBtns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const slide = this.closest('.slide');
-                const slideNumber = this.getAttribute('data-slide');
-                
-                const originalIcon = this.innerHTML;
-                this.innerHTML = '<i class="fas fa-spinner fa-pulse"></i>';
-                this.style.opacity = '0.7';
-                
-                html2canvas(slide, {
-                    scale: 2,
-                    backgroundColor: null,
-                    allowTaint: false,
-                    useCORS: true,
-                    logging: false
-                }).then(canvas => {
-                    const link = document.createElement('a');
-                    link.download = `park-pobedy-slide-${slideNumber}.png`;
-                    link.href = canvas.toDataURL('image/png');
-                    link.click();
-                    this.innerHTML = originalIcon;
-                    this.style.opacity = '1';
-                }).catch(error => {
-                    console.error('Ошибка:', error);
-                    this.innerHTML = originalIcon;
-                    this.style.opacity = '1';
-                    alert('Не удалось сохранить слайд');
-                });
-            });
-        });
-
-        // ========== СКАЧИВАНИЕ ВСЕХ СЛАЙДОВ В PDF ==========
-        async function downloadAllAsPDF() {
-            const { jsPDF } = window.jspdf;
-            
-            // Показываем индикатор загрузки
-            const originalText = pdfBtn.innerHTML;
-            pdfBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> wait...';
-            pdfBtn.disabled = true;
-            
-            try {
-                const pdf = new jsPDF({
-                    orientation: 'landscape',
-                    unit: 'px',
-                    format: 'a4'
-                });
-                
-                let isFirstPage = true;
-                
-                for (let i = 0; i < slides.length; i++) {
-                    const slide = slides[i];
-                    
-                    // Создаём скриншот слайда
-                    const canvas = await html2canvas(slide, {
-                        scale: 1.8,
-                        backgroundColor: '#0a1117',
-                        allowTaint: false,
-                        useCORS: true,
-                        logging: false
-                    });
-                    
-                    // Размеры A4 landscape в px (при 72 DPI)
-                    const pdfWidth = 1123;   // A4 landscape ширина в px
-                    const pdfHeight = 794;    // A4 landscape высота в px
-                    
-                    // Масштабируем изображение под размер страницы
-                    const imgData = canvas.toDataURL('image/jpeg', 0.95);
-                    
-                    if (!isFirstPage) {
-                        pdf.addPage();
-                    }
-                    isFirstPage = false;
-                    
-                    pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight, undefined, 'FAST');
-                }
-                
-                pdf.save('park-pobedy-prezentaciya.pdf');
-                
-            } catch (error) {
-                console.error('Ошибка создания PDF:', error);
-                alert('Произошла ошибка при создании PDF. Попробуйте позже.');
-            } finally {
-                pdfBtn.innerHTML = originalText;
-                pdfBtn.disabled = false;
-            }
-        }
-        
-        if (pdfBtn) {
-            pdfBtn.addEventListener('click', downloadAllAsPDF);
-        }
     })();
 </script>
 </body>
 </html>
+```
